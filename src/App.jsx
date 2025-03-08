@@ -1,6 +1,8 @@
 import useSwitch from './useSwitch';
+import useDate from './useDate';
 import './App.css'
-
+// SNACK 1
+/* 
 function App() {
   const { isOn, toggle } = useSwitch();
 
@@ -11,6 +13,18 @@ function App() {
     </div>
   );
 }
+*/
 
+function App() {
+  const { currentDate } = useDate();
+
+  return (
+    <div>
+      <h1>Data e ora attuali:</h1>
+      <p>{currentDate.toLocaleString()}</p>
+    </div>
+  );
+
+}
 
 export default App
